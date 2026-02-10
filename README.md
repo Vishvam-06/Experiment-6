@@ -4,7 +4,7 @@ Study of conditional statements in python
 
 ## Theory:
 Conditional statements in Python are used to perform decision-making operations in a program. They allow the execution of different blocks of code based on whether a given condition is true or false. Python provides conditional statements such as if, if–else, and if–elif–else to handle single as well as multiple conditions.
-The conditions are formed using relational operators (>, <, >=, <=, ==, !=) and logical operators (and, or, not). When a condition is satisfied, the corresponding block of code is executed; otherwise, control passes to the next condition or the else block.
+The conditions are formed using relational operators (>, <, >=, <=, ==, !=) and logical operators (and, or, not). When a condition is satisfied, the corresponding block of code is executed; otherwise, control passes to the next condition or the else block.In this experiment, conditional statements are used to solve various problems such as checking positive or negative numbers, determining even or odd numbers, finding the largest among values, assigning grades, checking leap years, validating dates, identifying vowels and consonants, and calculating salary and income tax.
 
 
 ## Algorithm:
