@@ -10,25 +10,26 @@ The conditions are formed using relational operators (>, <, >=, <=, ==, !=) and 
 ## Algorithm:
 1)Algorithm: Check Whether a Number is Positive, Negative, or Zero
 
-Start
-Read an integer number num from the user.
-If num > 0,
-Display “Positive”
-Else if num < 0,
-Display “Negative”
-Else,
-Display “Zero”
-Stop
+Step 1: Start
+Step 2: Read an integer number num from the user.
+Step 3: If num > 0,
+Step 4: Display “Positive”
+Step 5: Else if num < 0,
+Step 6: Display “Negative”
+Step 7: Else,
+Step 8: Display “Zero”
+Step 9: Stop
 
 2)Algorithm: Check Whether a Number is Even or Odd
 
 Start
-Read an integer number num from the user.
-If num % 2 == 0,
-Display “Even”
-Else,
-Display “Odd”
-Stop
+Input a using a = int(input("Enter a number a:"))
+Input b using b = int(input("Enter a number b:"))
+Input c using c = int(input("Enter a number c:"))
+If a > b and a > c, print "a is the greatest number"
+Else if b > a and b > c, print "b is the greatest number"
+Else, print "c is the greatest number"
+Stop     
 
 3)Algorithm: Find the Largest of Three Numbers
 
@@ -45,17 +46,13 @@ Stop
 4)Algorithm: Assign Grade Based on Marks
 
 Start
-Read the marks of the student as an integer.
-If marks ≥ 90,
-Display “Grade A”
-Else if marks ≥ 75,
-Display “Grade B”
-Else if marks ≥ 60,
-Display “Grade C”
-Else if marks ≥ 40,
-Display “Grade D”
-Else,
-Display “Fail”
+Input subject using subject = int(input("Enter a subject:"))
+If subject >= 90, print "Grade A"
+Else if subject >= 75, print "Grade B"
+Else if subject >= 60, print "Grade C"
+Else if subject >= 40, print "Grade D"
+Else, print "Fail"
+Stop     
 
 5)Algorithm: Check Whether a Year is a Leap Year
 
@@ -72,84 +69,58 @@ Stop
 
 6)Algorithm: Validate a Date and Find the Next Date
 
-Start
-Read the date from the user in dd/mm/yyyy format.
-Split the date and store day as dd, month as mm, and year as yy.
-Step 1: Find Maximum Days in the Month
-If mm is 1, 3, 5, 7, 8, 10, or 12,
-Set max1 = 31
-Else if mm is 4, 6, 9, or 11,
-Set max1 = 30
-Else if mm is 2:
-If yy is a leap year,
-Set max1 = 29
-Else,
-Set max1 = 28
-Else,
-Display “Date is invalid” and Stop
-Step 2: Validate the Date
-If mm < 1 or mm > 12,
-Display “Date is invalid” and Stop
-Else if dd < 1 or dd > max1,
-Display “Date is invalid” and Stop
-Step 3: Increment the Date
-If dd = max1 and mm ≠ 12:
-Set dd = 1
-Set mm = mm + 1
-Else if dd = 31 and mm = 12:
-Set dd = 1
-Set mm = 1
-Set yy = yy + 1
-Else:
-Set dd = dd + 1
-Step 4: Display Result
-Display the incremented date.
-Stop
+Step 1: Start
+Step 2: Input & Parsing
+        Accept a date string in dd/mm/yyyy format.
+        Split the string by the / character and convert the day (dd), month (mm), and year (yy) into integers.
+Step 3: Determine Maximum Days in Month
+        If month is 1, 3, 5, 7, 8, 10, or 12: Set max1 = 31.
+        Else, if month is 4, 6, 9, or 11: Set max1 = 30.
+        Else, if the year is a Leap Year (divisible by 4 and not 100, or divisible by 400): Set max1 = 29.
+        Otherwise: Set max1 = 28.
+Step 4: Validate the Input Date
+        If mm is not between 1 and 12, OR dd is not between 1 and max1: Print "Date is invalid" and stop.
+Step 5: Increment Logic
+        Case A (End of Month, not December): If dd == max1 and mm != 12:
+        Set dd = 1, increment mm by 1.
+        Case B (End of Year): If dd == 31 and mm == 12:
+        Set dd = 1, mm = 1, and increment yy by 1.
+        Case C (Standard Day): Otherwise:
+        Increment dd by 1.
+Step 6: Output – Display the incremented dd, mm, and yy.
+Step 7: Stop
 
 7)gorithm: Check Whether a Character is Vowel or Consonant
 
-Start
-Read a character ch from the user.
-If ch belongs to the set {a, e, i, o, u, A, E, I, O, U},
-Display “Vowel”
-Else,
-Display “Consonant”
-Stop
+Step 1: Start
+Step 2: Input – Accept a single character from the user and store it in the variable lett.
+Step 3: Membership Check – Check if the character stored in lett exists within the string constant 'aeiouAEIOU'.
+Step 4: Branching (Condition True) – If the character is found in that string:
+Print the message "Vowel". 
+Step 5: Branching (Condition False) – Else (if the character is not found in the string): Print the message "Consonant".
+Step 6: Stop
 
 8)Algorithm: Calculate Gross Salary
 
-Start
-Read the basic salary as a floating-point number.
-If basic ≤ 10000:
-Calculate hra = 0.20 × basic
-Calculate da = 0.80 × basic
-Else if basic ≤ 20000:
-Calculate hra = 0.25 × basic
-Calculate da = 0.90 × basic
-Else:
-Calculate hra = 0.30 × basic
-Calculate da = 0.95 × basic
-Calculate gross salary:
-gross = basic + hra + da
-Display the gross salary.
-Stop
+Step 1: Start
+Step 2: Input – Read the basic salary from the user.
+Step 3: Condition 1 – If basic is less than or equal to 10,000:Set HRA = 20% of basicSet DA = 80% of basic
+Step 4: Condition 2 – Else, if basic is less than or equal to 20,000:Set HRA = 25% of basicSet DA = 90% of basic
+Step 5: Condition 3 – Else (if basic is greater than 20,000):Set HRA = 30% of basicSet DA = 95% of basic
+Step 6: Calculation – Calculate gross salary using the formula: $$gross = basic + HRA + DA$$
+Step 7: Output – Display the calculated gross salary.
+Step 8: Stop  
 
 9)Algorithm: Calculate Income Tax
 
-Start
-Read the income as a floating-point number.
-If income ≤ 2,50,000
-Set tax = 0
-Else if income ≤ 5,00,000
-Calculate tax = (income − 2,50,000) × 0.05
-Else if income ≤ 10,00,000
-Calculate
-tax = (2,50,000 × 0.05) + (income − 5,00,000) × 0.20
-Else
-Calculate
-tax = (2,50,000 × 0.05) + (5,00,000 × 0.20) + (income − 10,00,000) × 0.30
-Display the calculated income tax.
-Stop
+Step 1: Start
+Step 2: Input – Read the income from the user.
+Step 3: Bracket 1 (0% Tax)If income > 250,000:Set tax = 0
+Step 4: Bracket 2 (5% Tax)Else, if income > 500,000:Calculate tax on the amount above 250,000: tax = (income - 250,000) * 0.05
+Step 5: Bracket 3 (20% Tax)Else, if income $\le$ 1,000,000:Take the full tax from Bracket 2 (12,500) and add 20% of the amount above 500,000:tax = 12,500 + (income - 500,000) * 0.20
+Step 6: Bracket 4 (30% Tax)Else (if income > 1,000,000):Take the full tax from Brackets 2 and 3 (12,500 + 100,000) and add 30% of the amount above 1,000,000:tax = 112,500 + (income - 1,000,000) * 0.30
+Step 7: Output – Display the total calculated tax.
+Step 8: Stop   
 
 
 ## Conclusion 
